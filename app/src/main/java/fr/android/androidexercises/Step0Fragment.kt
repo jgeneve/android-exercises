@@ -12,11 +12,11 @@ import android.widget.TextView
 class Step0Fragment : Fragment() {
 
     companion object {
-        private val STEP_0 = "This is step 0"
+        private const val STEP_0 = "This is step 0"
     }
 
-    private val textView: TextView? = null
-    private val listener: OnNextStep0Listener? = null
+    private var textView: TextView? = null
+    private var listener: OnNextStep0Listener? = null
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
