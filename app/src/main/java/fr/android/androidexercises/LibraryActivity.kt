@@ -10,7 +10,7 @@ class LibraryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_library)
 
         // TODO Get image view and load image form URL
-        // http://img3.wikia.nocookie.net/__cb20120317101541/harrypotter/images/3/37/Gryffindor_Crest.jpg
+        // https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/440px-Harry_Potter_wordmark.svg.png
     }
 
 }
