@@ -14,7 +14,7 @@ class BookActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book)
 
-        val book: Book = intent.getParcelableExtra(BOOK)
+        val book: Book? = intent.getParcelableExtra(BOOK)
 
         val authorTextView = findViewById<TextView>(R.id.authorTextView)
         authorTextView.text = book.author
