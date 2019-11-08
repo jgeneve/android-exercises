@@ -7,9 +7,7 @@ import android.widget.BaseAdapter
 
 class BookAdapter(context: Context, private val books: List<Book>) : BaseAdapter() {
 
-    init {
-        // TODO LayoutInflater.from()
-    }
+    // TODO create variable with LayoutInflater.from()
 
     override fun getCount(): Int {
         return 0 // TODO
@@ -23,7 +21,7 @@ class BookAdapter(context: Context, private val books: List<Book>) : BaseAdapter
         return 0 // TODO
     }
 
-    override fun getView(position: Int, convertView: View, parent: ViewGroup): View? {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View? {
         return null // TODO
     }
 
