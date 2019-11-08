@@ -1,7 +1,7 @@
 package fr.android.androidexercises
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
 
 class BookActivity : AppCompatActivity() {
@@ -14,7 +14,7 @@ class BookActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book)
 
-        val book: Book = intent.getParcelableExtra(BOOK)
+        val book: Book? = intent.getParcelableExtra(BOOK)
 
         val authorTextView = findViewById<TextView>(R.id.authorTextView)
         authorTextView.text = book.author
