@@ -31,7 +31,7 @@ class LibraryActivity : AppCompatActivity() {
         val client = OkHttpClient()
 
         val request = Request.Builder()
-                .url("https://api.github.com/users/blacroix")
+                .url("https://api.github.com/users/mikklfr")
                 .build()
 
         client.newCall(request).enqueue(object : Callback {
@@ -42,7 +42,7 @@ class LibraryActivity : AppCompatActivity() {
             @Throws(IOException::class)
             override fun onResponse(call: Call, response: Response) {
                 try {
-                    val user = JSONObject(response.body()!!.string())
+                    val user = JSONObject(response.body!!.string())
                     runOnUiThread {
                         try {
                             messageTextView.text = getString(R.string.hello, user.get("name"))
