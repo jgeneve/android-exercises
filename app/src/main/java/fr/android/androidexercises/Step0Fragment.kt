@@ -18,7 +18,7 @@ class Step0Fragment : Fragment() {
     private var textView: TextView? = null
     private var listener: OnNextStep0Listener? = null
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
         // TODO cast context to listener
     }
