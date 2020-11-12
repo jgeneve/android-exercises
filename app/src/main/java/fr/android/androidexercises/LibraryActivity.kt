@@ -11,6 +11,8 @@ import android.widget.Toast
 
 class LibraryActivity : AppCompatActivity() {
 
+    private val requestCodeBook = 1;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_library)
@@ -20,13 +22,16 @@ class LibraryActivity : AppCompatActivity() {
         val openButton = findViewById<Button>(R.id.openButton)
 
         openButton.setOnClickListener {
-            // TODO replace with startActivityForResult() to start BookActivity
-            Toast.makeText(this@LibraryActivity, R.string.toast_todo, Toast.LENGTH_SHORT).show()
+            val bookActivity = Intent(this, BookActivity::class.java)
+            startActivityForResult(bookActivity,requestCodeBook)
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        // TODO get back book name
+        if(requestCode == requestCodeBook &&  resultCode == RESULT_OK) {
+            val bookName = data?.getStringExtra("BOOK_NAME")
+            Toast.makeText(this, bookName, Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
